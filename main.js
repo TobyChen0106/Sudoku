@@ -15,7 +15,6 @@ let focusGrid = { row: 0, col: 0 };
 
 window.addEventListener("keydown", (e) => {
     if ((e.keyCode >= 48 && e.keyCode <= 57) || (e.keyCode >= 96 && e.keyCode <= 105)) {
-        console.log(theSudokuProblem[focusGrid.row][focusGrid.col])
         if (theSudokuProblem[focusGrid.row][focusGrid.col] === 0) {
             if (checkValid(focusGrid.row, focusGrid.col, Number(e.key))) {
                 sudokuNumbers[focusGrid.row][focusGrid.col] = Number(e.key);
