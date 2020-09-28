@@ -58,7 +58,7 @@ html, body {
 }
 
 .board-grid-1x1:hover {
-	color: #999;
+	color: rgb(101, 211, 138);
 	background-color: #333;
 	/* transition: 0.5s; */
 }

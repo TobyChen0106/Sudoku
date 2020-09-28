@@ -19,13 +19,26 @@ window.addEventListener("keydown", (e) => {
             if (checkValid(focusGrid.row, focusGrid.col, Number(e.key))) {
                 sudokuNumbers[focusGrid.row][focusGrid.col] = Number(e.key);
                 updateBoardGridContent();
-            }else{
-                document.getElementById("board-holder").style.border = "10px solid rgb(240, 117, 117)";
-                window.setTimeout(()=>document.getElementById("board-holder").style.border = "10px solid #333", 500);
+                console.log(sudokuNumbers.filter(i => { return i.filter(j => j === 0).length !== 0 }).length)
+                if (sudokuNumbers.filter(i => { return i.filter(j => j === 0).length !== 0 }).length === 0) {
+                    showSuccessEffect();
+                }
+            } else {
+                showErrorEffect();
             }
         }
     }
 });
+
+const showErrorEffect = () => {
+    document.getElementById("board-holder").style.border = "10px solid rgb(240, 117, 117)";
+    window.setTimeout(() => document.getElementById("board-holder").style.border = "10px solid #333", 500);
+}
+
+const showSuccessEffect = () => {
+    document.getElementById("board-holder").style.border = "10px solid rgb(101, 211, 138)";
+    window.setTimeout(() => document.getElementById("board-holder").style.border = "10px solid #333", 5000);
+}
 
 const updateBoardGridContent = () => {
     let boardGridContent = ""
