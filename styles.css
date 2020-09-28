@@ -1,0 +1,69 @@
+html, body {
+	height: 100%;
+	overflow: hidden;
+	box-sizing: border-box;
+	background: #eeeeee;
+	font-family: Ubuntu, "times new roman", times, roman, serif;
+}
+
+.game-holder {
+	height: 100%;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+}
+
+.game-title {
+	font-size: 4vw;
+	margin-bottom: 0.5vw;
+}
+
+#board-holder {
+	height: 54vw;
+	width: 54vw;
+	max-height: 72vh;
+	max-width: 72vh;
+	display: flex;
+	flex-direction: row;
+	flex-wrap: wrap;
+	align-items: center;
+	justify-content: center;
+	border: 10px solid #333;
+	transition: 0.5s;
+}
+
+.board-grid-9x9 {
+	height: 18vw;
+	width: 18vw;
+	max-height: 24vh;
+	max-width: 24vh;
+	display: flex;
+	flex-direction: row;
+	flex-wrap: wrap;
+	align-items: center;
+	justify-content: center;
+	box-shadow: inset 0px 0px 0px 5px #333;
+}
+
+.board-grid-1x1 {
+	height: 6vw;
+	width: 6vw;
+	max-height: 8vh;
+	max-width: 8vh;
+	font-size: 3vw;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+
+.board-grid-1x1:hover {
+	color: #999;
+	background-color: #333;
+	/* transition: 0.5s; */
+}
+
+.description {
+	margin-top: 2vw;
+	font-size: 1.8vw;
+}
